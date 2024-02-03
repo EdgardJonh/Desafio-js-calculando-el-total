@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafío 1 - JavaScript</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <section>
+        <div class="card">
+            <div class="img-card"></div>
+              <h6>Laptop Gamer AMD</h6>
+              <p>Precio base: $<span class="precio-inicial"></span> </p>
+
+              <p>Cantidad:
+                <span class="cantidad">0</span>
+                <button  class="boton-mas" onclick="
+                let precioInicial = document.querySelector('.precio-inicial')
+                 let precioTotal = document.querySelector('.valor-total')
+                 let cantidad = document.querySelector('.cantidad')
+
+                let pInicial = Number(precioInicial.innerHTML)
+                let laCantidad = Number(cantidad.innerHTML)
+                // console.log(pInicial)
+                // console.log(++laCantidad)
+                // Calcula
+                laCantidad++
+                let elTotal = pInicial * laCantidad
+                //  console.log(elTotal)
+
+                // Imprime 
+                precioTotal.innerHTML = elTotal
+                cantidad.innerHTML = laCantidad
+                "
+                >+</button>
+                <button class="boton-menos" onclick="
+                let valorInicial = document.querySelector('.precio-inicial')
+                 let precioTotal = document.querySelector('.valor-total')
+                 let cantidad = document.querySelector('.cantidad')
+
+                let elprecioTotal= Number(precioTotal.innerHTML)
+                let laCantidad2 = Number(cantidad.innerHTML)
+                let elvalorInicial = Number(valorInicial.innerHTML)
+                // console.log(pInicial)
+                // console.log(++laCantidad)
+                // Calcula
+                laCantidad2--
+                let total = elprecioTotal - 12000
+                // console.log(total)
+            //    console.log(elprecioTotal)
+                //  console.log(elTotal)
+
+                // Imprime 
+                // precioTotal.innerHTML = elTotal2
+                cantidad.innerHTML = laCantidad2
+                precioTotal.innerHTML= total
+                "
+                    
+                >-</button>
+              </p>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="total-section">
+        <p>Total a pagar: $<span class="valor-total"></span> </p>
+    </div>
+
+    <script src="index.js">
+   
+              
+
+    </script>
+</body>
+</html>
